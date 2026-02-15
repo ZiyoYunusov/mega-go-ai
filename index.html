@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AI Помощник - умный чат-бот для ответов на вопросы по математике, философии, литературе и другим темам">
+    <meta name="keywords" content="AI, чат-бот, помощник, математика, философия, обучение">
+    <meta name="author" content="AI Assistant">
+
+    <title>AI Помощник - Умный Чат-Бот</title>
+
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon (опционально) -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+
+<body>
+    <!-- Основной контейнер чата -->
+    <div class="chat-container">
+
+        <!-- Шапка чата -->
+        <div class="chat-header">
+            <h1>🤖 AI Помощник</h1>
+            <p>Задавай вопросы по любым темам!</p>
+        </div>
+
+        <!-- Область сообщений -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-content">
+                    Привет! 👋 Я твой AI-помощник. Я знаю много о математике, геометрии, философии, литературе, физике,
+                    истории и могу дать полезные советы. Задавай любые вопросы!
+                </div>
+            </div>
+        </div>
+
+        <!-- Быстрые подсказки -->
+        <div class="suggestions">
+            <div class="suggestion-chip" onclick="sendSuggestion('Что такое философия?')">
+                🤔 Что такое философия?
+            </div>
+            <div class="suggestion-chip" onclick="sendSuggestion('Как решать уравнения?')">
+                📐 Как решать уравнения?
+            </div>
+            <div class="suggestion-chip" onclick="sendSuggestion('Что такое метафора?')">
+                📚 Что такое метафора?
+            </div>
+            <div class="suggestion-chip" onclick="sendSuggestion('Как справиться со стрессом?')">
+                💡 Советы по стрессу
+            </div>
+        </div>
+
+        <!-- Область ввода -->
+        <div class="chat-input-container">
+            <input type="text" class="chat-input" id="userInput" placeholder="Напиши свой вопрос..."
+                onkeypress="handleKeyPress(event)" autocomplete="off" aria-label="Введите ваш вопрос">
+            <button class="send-button" onclick="sendMessage()" aria-label="Отправить сообщение">
+                Отправить
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Подключение JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
